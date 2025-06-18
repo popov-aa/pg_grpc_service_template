@@ -17,7 +17,7 @@ int main(int argc, char* argv[]) {
       userver::components::MinimalServerComponentList()
           .AppendComponentList(userver::ugrpc::server::MinimalComponentList())
           .AppendComponentList(userver::ugrpc::client::MinimalComponentList())
-          .Append<userver::congestion_control::Component>()
+          // .Append<userver::congestion_control::Component>()
           .Append<userver::ugrpc::client::ClientFactoryComponent>()
           .Append<userver::server::handlers::Ping>()
           .Append<userver::components::TestsuiteSupport>()

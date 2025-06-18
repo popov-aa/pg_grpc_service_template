@@ -40,10 +40,10 @@ components_manager:
         grpc-client-middlewares-pipeline:
         grpc-server-middlewares-pipeline:
 
-        congestion-control:
+        # congestion-control:
         grpc-server-logging:
         grpc-server-deadline-propagation:
-        grpc-server-congestion-control:
+        # grpc-server-congestion-control:
 
         server:
             listener:                 # configuring the main listening socket...

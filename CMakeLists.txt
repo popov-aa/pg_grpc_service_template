@@ -1,13 +1,16 @@
 cmake_minimum_required(VERSION 3.12...3.31)
 project(service_template CXX)
 
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(DownloadUserver)
 
-find_package(userver COMPONENTS core postgresql grpc QUIET)
+find_package(userver COMPONENTS core postgresql grpc ydb QUIET)
 if(NOT userver_FOUND)
   # Tries TRY_DIR first, falls back to downloading userver from GitHub using CPM.
-  download_userver(TRY_DIR third_party/userver VERSION 2.8)
+  download_userver(TRY_DIR third_party/userver VERSION 2.10)
 endif()
 
 userver_setup_environment()

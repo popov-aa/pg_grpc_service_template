@@ -40,7 +40,8 @@
         "CMAKE_C_COMPILER": "cc",
         "CMAKE_CXX_COMPILER": "c++",
         "USERVER_FEATURE_POSTGRESQL": "ON",
-        "USERVER_FEATURE_GRPC": "ON"
+        "USERVER_FEATURE_GRPC": "ON",
+        "USERVER_FEATURE_YDB": "ON"
       }
     }
   ]
