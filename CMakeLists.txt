@@ -23,7 +23,7 @@ add_library(${PROJECT_NAME}_objs OBJECT
     src/hello_client.hpp
     src/hello_client.cpp
 )
-target_link_libraries(${PROJECT_NAME}_objs PUBLIC userver::postgresql userver::grpc)
+target_link_libraries(${PROJECT_NAME}_objs PUBLIC userver::postgresql userver::grpc userver-ydb)
 
 # Create a proto library with userver extensions
 userver_add_grpc_library(${PROJECT_NAME}_proto PROTOS handlers/hello.proto)

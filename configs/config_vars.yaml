@@ -11,3 +11,13 @@ server-grpc-port: 8081
 hello-endpoint: '[::1]:8081'
 
 dbconnection: 'postgresql://service_template_user:password@localhost:5432/service_template_db_1'
+
+ydb-max-pool-size: 10
+ydb-min-pool-size: 5
+ydb-operation-settings-cancel-after: 1s
+ydb-operation-settings-client-timeout: 1s
+ydb-operation-settings-operation-timeout: 1s
+ydb-operation-settings-get-session-timeout: 10s
+ydb-operation-settings-retries: 3
+
+secure-data-file: secure_data.json

@@ -8,6 +8,9 @@
 #include <userver/ugrpc/client/component_list.hpp>
 #include <userver/ugrpc/server/component_list.hpp>
 #include <userver/utils/daemon_run.hpp>
+#include <userver/ydb/component.hpp>
+#include <userver/storages/secdist/component.hpp>
+#include <userver/storages/secdist/provider_component.hpp> 
 
 #include "hello.hpp"
 #include "hello_client.hpp"
@@ -23,6 +26,10 @@ int main(int argc, char* argv[]) {
           .Append<userver::components::TestsuiteSupport>()
           .Append<userver::components::HttpClient>()
           .Append<userver::server::handlers::TestsControl>();
+  component_list
+          .Append<userver::components::DefaultSecdistProvider>()
+          .Append<userver::components::Secdist>()
+          .Append<userver::ydb::YdbComponent>();
 
   service_template::AppendHello(component_list);
   service_template::AppendHelloClient(component_list);

@@ -96,3 +96,21 @@ components_manager:
 
         dns-client:
             fs-task-processor: fs-task-processor
+
+        secdist:
+            provider: default-secdist-provider
+        default-secdist-provider:
+            config: $secure-data-file
+
+        ydb:
+            operation-settings:
+                cancel-after: $ydb-operation-settings-cancel-after
+                client-timeout: $ydb-operation-settings-client-timeout
+                operation-timeout: $ydb-operation-settings-operation-timeout
+                get-session-timeout: $ydb-operation-settings-get-session-timeout
+                retries: $ydb-operation-settings-retries
+            databases:
+                maindb:
+                    max_pool_size: $ydb-max-pool-size
+                    min_pool_size: $ydb-min-pool-size
+                    sync_start: true
