@@ -1,5 +1,5 @@
 {
-    "image": "ghcr.io/userver-framework/ubuntu-22.04-userver-base:latest",
+    "image": "docker-test:latest",
     "remoteUser": "user",
     "workspaceMount": "source=${localWorkspaceFolder},target=/home/user/service_template,type=bind",
     "workspaceFolder": "/home/user/service_template",
